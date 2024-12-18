@@ -49,7 +49,7 @@ Usage
 Use the client to query and manipulate your organisation’s Salesforce data. First construct a client using the builder:
 
 ```php
-$builder = new \Phpforce\SoapClient\ClientBuilder(
+$builder = new \Salesforce\SoapClient\ClientBuilder(
   '/path/to/your/salesforce/wsdl/sandbox.enterprise.wsdl.xml',
   'username',
   'password',
@@ -119,7 +119,7 @@ To enable logging for the client, call `withLog()` on the builder. For instance 
 $log = new \Monolog\Logger('name');  
 $log->pushHandler(new \Monolog\Handler\StreamHandler('path/to/your.log'));
 
-$builder = new \Phpforce\SoapClient\ClientBuilder(
+$builder = new \Salesforce\SoapClient\ClientBuilder(
   '/path/to/your/salesforce/wsdl/sandbox.enterprise.wsdl.xml',
   'username',
   'password',
