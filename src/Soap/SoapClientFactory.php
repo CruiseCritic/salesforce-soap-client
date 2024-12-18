@@ -1,8 +1,6 @@
 <?php
 namespace Salesforce\SoapClient\Soap;
 
-use Salesforce\SoapClient\Soap\TypeConverter;
-
 /**
  * Factory to create a \SoapClient properly configured for the Salesforce SOAP
  * client

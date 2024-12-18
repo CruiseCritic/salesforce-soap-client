@@ -5,7 +5,7 @@ use Psr\Log\LoggerInterface;
 use Salesforce\SoapClient\Event\FaultEvent;
 use Salesforce\SoapClient\Event\RequestEvent;
 use Salesforce\SoapClient\Event\ResponseEvent;
-use Symfony\Contracts\EventDispatcher\EventSubscriberInterface;
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
  * A plugin that logs messages

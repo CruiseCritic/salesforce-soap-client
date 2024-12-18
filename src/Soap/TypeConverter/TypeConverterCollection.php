@@ -2,8 +2,6 @@
 
 namespace Salesforce\SoapClient\Soap\TypeConverter;
 
-use Doctrine\Common\Collections\ArrayCollection;
-
 /**
  * A collection of type converters
  */
