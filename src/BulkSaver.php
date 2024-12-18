@@ -2,8 +2,6 @@
 
 namespace Salesforce\SoapClient;
 
-use Salesforce\SoapClient\sObject;
-use Salesforce\SoapClient\type;
 use Salesforce\SoapClient\Result\SaveResult;
 
 /**

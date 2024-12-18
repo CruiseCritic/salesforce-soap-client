@@ -2,8 +2,8 @@
 
 namespace Salesforce\SoapClient\EventListener;
 
+use Psr\Log\LoggerInterface;
 use Salesforce\SoapClient\Event;
-use Symfony\Component\HttpKernel\Log\LoggerInterface;
 
 class LogTransactionListener
 {
@@ -33,16 +33,15 @@ class LogTransactionListener
         }
     }
 
-    public function onSalesforceClientSoapFault(Event\SoapFaultEvent $event)
+    public function onSalesforceClientSoapFault(Event\FaultEvent $event)
     {
-        $this->logger->err('[Salesforce] fault: ' . $event->getSoapFault()->getMessage());
+        $this->logger->error('[Salesforce] fault: ' . $event->getSoapFault()->getMessage());
     }
 
     public function onSalesforceClientError(Event\ErrorEvent $event)
     {
         $error = $event->getError();
-        $this->logger->err('[Salesforce] error: ' . $error->statusCode . ' - '
-                           . $error->message, get_object_vars($error));
+        $this->logger->error('[Salesforce] error: ' . $error->statusCode . ' - ' . $error->message, get_object_vars($error));
     }
 
     public function setLogging($logging)
